@@ -1,0 +1,29 @@
+{
+  "name": "is-babel",
+  "description": "Check if your code is running in Babel",
+  "version": "0.0.0",
+  "keywords": [
+    "check",
+    "babel"
+  ],
+  "repository": "andrepolischuk/is-babel",
+  "devDependencies": {
+    "ava": "^0.2.0",
+    "babel": "^5.5.6",
+    "rimraf": "^2.4.3"
+  },
+  "main": "index.es5.js",
+  "scripts": {
+    "clean": "rimraf index.es5.js",
+    "test-node": "node test/node.js",
+    "test-babel": "babel-node test/babel.js",
+    "pretest": "npm run transpile",
+    "test": "npm run test-node && npm run test-babel",
+    "posttest": "npm run clean",
+    "transpile": "babel --stage 0 index.js --out-file index.es5.js",
+    "prepublish": "npm run transpile",
+    "postpublish": "npm run clean"
+  },
+  "author": "Andrey Polischuk <andre.polischuk@gmail.com>",
+  "license": "MIT"
+}
