@@ -24,6 +24,6 @@
     "prepublish": "npm run transpile",
     "postpublish": "npm run clean"
   },
-  "author": "Andrey Polischuk <andre.polischuk@gmail.com>",
+  "author": "Andrey Polischuk <me@andrepolischuk.com> (https://andrepolischuk.com)",
   "license": "MIT"
 }
